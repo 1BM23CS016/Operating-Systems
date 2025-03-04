@@ -1,0 +1,30 @@
+//Write a program in C to find the sum of rows and columns of a matrix.
+#include<stdio.h>
+void main(){
+
+int mat[3][3], i, j, sum =0;
+
+printf("Enter elements of matrix:\n");
+for (i=0; i <3 ; i++){
+    for (j=0; j<3; j++){
+        scanf("%d", &mat[i][j]);
+    }
+}
+//sum of rows
+for (i = 0; i < 3; i++) {
+        int rowSum = 0;
+        for (j = 0; j < 3; j++) {
+            rowSum += mat[i][j];
+        }
+        printf("Sum of row %d = %d\n", i + 1, rowSum);
+    }
+
+    // Sum of columns
+    for (j = 0; j < 3; j++) {
+        int colSum = 0;
+        for (i = 0; i < 3; i++) {
+            colSum += mat[i][j];
+        }
+        printf("Sum of column %d = %d\n", j + 1, colSum);
+    }
+}
