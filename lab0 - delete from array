@@ -1,23 +1,25 @@
-//Write a program in C to find the second largest element in an array.
+//Write a program in C to delete an element at a desired position from an array.
 #include<stdio.h>
 void main(){
-int arr[10], d;
-for (int i = 0; i<10; i++){
+int arr[5], d;
+for (int i = 0; i<5; i++){
     printf("Enter number: ");
     scanf("%d", &arr[i]);
 }
-d = arr[0];
-for (int j =0; j<10; j++){
-    if (arr[j]> d){
-        d = arr[j];
+printf("Array is:\n");
+for (int i = 0; i<5; i++){
+    printf("%d ", arr[i]);
+}
+int pos;
+printf("\nEnter position: ");
+scanf("%d", &pos);
+for (int j=pos; j<5; j++){
+        arr[j]=arr[j+1];
     }
 
+printf("Array after deletion is:\n");
+for (int i = 0; i<4; i++){
+
+    printf("%d ", arr[i]);
 }
-int b= arr[0];
-for (int j =0; j<10; j++){
-    if ((arr[j]>b)&&(arr[j]!= d)){
-        b = arr[j];
-    }
-}
-printf("The second largest element is %d", b);
 }
