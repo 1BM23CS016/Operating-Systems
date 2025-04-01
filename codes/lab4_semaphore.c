@@ -3,10 +3,10 @@
 
 #define BUFFER_SIZE 3
 
-int mutex = 1;
+int mutex = 1; //0:lock 1:unlock
 int full = 0;
 int empty = BUFFER_SIZE;
-int x = 0;
+int x = 0; //produced items
 
 void wait(int S) {
     while (S <= 0);
